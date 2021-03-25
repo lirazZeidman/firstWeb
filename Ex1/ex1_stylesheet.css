@@ -1,0 +1,284 @@
+* {
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6);
+  -moz-transition-property: all;
+  -moz-transition-timing-function: cubic-bezier(100, 50, 21, 6);
+}
+
+html {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+  background-image: url("https://i.pinimg.com/236x/5d/20/3c/5d203c8eb41b3757d837fe8de4bdc8a9.jpg");
+  background-repeat: repeat;
+  background-color: #cccccc;
+  scroll-behavior: smooth;
+  text-align: center;
+
+  margin-top: 20px; /* Add a top margin to avoid content overlay */
+  font-variant: small-caps;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif; */
+  font-family: "Oswald", "calibri", "Trebuchet MS";
+}
+
+.navbar {
+  margin: 10px auto 0;
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  border-radius: 8px;
+  display: block;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  align-items: center;
+  padding: 3;
+  margin: 0;
+}
+
+.navbar a {
+  color: #999;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+  background: #fff;
+  padding: 20px 20px;
+  color: #1b1b1b;
+}
+
+/* Add a color to the active/current link */
+.navbar a:active {
+  background-color: rgb(206, 230, 238);
+  color: gold;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 10ch;
+}
+h2 {
+  font-size: 3.5ch;
+}
+
+.about-area,
+.photos-area,
+.playlist-area,
+.like-area,
+.qrcoder-area,
+.contact-area {
+  /*position: relative;*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.slideshow-container {
+  max-width: 500px;
+  max-height: 500px;
+  position: inherit;
+  margin: auto;
+}
+.mySlides {
+  display: none;
+  height: 220px;
+}
+.mySlides img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  cursor: pointer;
+  position: unset;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  margin-right: 90px;
+  margin-left: 90px;
+  padding: 16px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*! trying  */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+/* @-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+form {
+  margin-top: 50px;
+  transition: all 4s ease-in-out;
+}
+
+.form-control {
+  width: 500px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+input {
+  height: 45px;
+}
+
+form .submit {
+  background: #ff5722;
+  border-color: transparent;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+form .submit:hover {
+  background-color: #f44336;
+  cursor: pointer;
+}
+
+.emoji {
+  background-color: transparent;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+.heart-btn{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.content{
+  padding: 13px 16px;
+  display: flex;
+  border: 2px solid #eae2e1;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.content.heart-active{
+  border-color: #f9b9c4;
+  background: #fbd0d8;
+}
+.heart{
+  position: absolute;
+  background: url("img.png") no-repeat;
+  background-position: left;
+  background-size: 2900%;
+  height: 90px;
+  width: 90px;
+  top: 50%;
+  left: 21%;
+  transform: translate(-50%,-50%);
+}
+.text{
+  font-size: 21px;
+  margin-left: 30px;
+  color: grey;
+  font-family: 'Montserrat',sans-serif;
+}
+.numb:before{
+  content: '12';
+  font-size: 21px;
+  margin-left: 7px;
+  font-weight: 600;
+  color: #9C9496;
+  font-family: sans-serif;
+}
+.numb.heart-active:before{
+  content: '13';
+  color: #000;
+}
+.text.heart-active{
+  color: #000;
+}
+.heart.heart-active{
+  animation: animate .8s steps(28) 1;
+  background-position: right;
+}
+@keyframes animate {
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
+} */
